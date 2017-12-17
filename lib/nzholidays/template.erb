@@ -47,7 +47,7 @@ module Nzholidays
 
   HOLIDAYS = [
 <% calendars.each do |calendar|
-  calendar.events.each do |event|
+  calendar.events.select {|e| !e.summary.match(/Anniversary/i) }.each do |event|
    -%>
     nz_time( <%= event.dtstart.year %>, <%= event.dtstart.month %>, <%= event.dtstart.day %> ), # <%= event.summary %>
 <%
