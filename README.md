@@ -1,4 +1,4 @@
-# Nzholidays
+# Nzholidays🏖
 
 This gem offers a way to determine whether a date is a New Zealand public
 holiday.
@@ -28,7 +28,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This can be used in your code, e.g.
+
+```ruby
+require 'nzholidays'
+
+Nzholidays.nz_public_holiday?(Time.now)
+```
+
 
 ## Development
 
