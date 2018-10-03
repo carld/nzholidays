@@ -1,55 +1,16 @@
-<%
-  require "bundler/setup"
-
-  require 'open-uri'
-  require 'net/http'
-  require 'icalendar'
-  require 'tzinfo'
-
-  SOURCE_URL = 'http://apps.employment.govt.nz/ical/public-holidays-all.ics'
-  FILE='holidays.ics'
-
-  # Download the ICS file
-  open(FILE, 'wb') do |file|
-    file << open(SOURCE_URL).read
-  end
-
-  cal_file = File.open(FILE)
-  calendars = Icalendar::Calendar.parse(cal_file)
-
--%>
 # Auto-generated at <%= Time.now %>
-# Do not edit - see template lib/nzholidays/template.erb
+# Do not edit - see template <%= __FILE__ %>
 # To regenerate, `bundle exec rake generate`
-
-require "nzholidays/version"
-require 'time'
-require 'tzinfo'
 
 module Nzholidays
 
-  NZ_TIME_ZONE = TZInfo::Timezone.get('Pacific/Auckland')
-
-  def self.nz_time(year, month, day)
-
-    # Holiday starts at the beginning of the given day
-    time = ::Time.new(year, month, day, 0, 0, 0)
-
-    # Find the UTC total offset (daylight savings or standard time) for time
-
-    # note period_for_local ignores timezone info in the time object
-    #   http://www.rubydoc.info/gems/tzinfo/TZInfo/Timezone#period_for_local-instance_method
-
-    utc_total_offset = NZ_TIME_ZONE.period_for_local(time).utc_total_offset
-
-    time.getlocal(utc_total_offset)
-  end
-
   HOLIDAYS = [
 <% calendars.each do |calendar|
-  calendar.events.select {|e| !e.summary.match(/Anniversary/i) }.each do |event|
-   -%>
-    nz_time( <%= event.dtstart.year %>, <%= event.dtstart.month %>, <%= event.dtstart.day %> ), # <%= event.summary %>
+  events = calendar.events.select {|e| !e.summary.match(/Anniversary/i) }.sort {|a,b| a.dtstart <=> b.dtstart }
+  events.each do |event|
+    time = Nzholidays.nz_time(event.dtstart.year, event.dtstart.month, event.dtstart.day)
+-%>
+    Time.new(<%= time.year %>, <%= time.month %>, <%= time.day %>, <%= time.hour %>, <%= time.min %>, <%= time.sec %>, <%= time.gmt_offset %>), # <%= event.summary %>
 <%
      end
    end
@@ -58,25 +19,15 @@ module Nzholidays
 
   ANNIVERSARIES = [
 <% calendars.each do |calendar|
-  calendar.events.select {|e| !!e.summary.match(/Anniversary/i) }.each do |event|
+  events = calendar.events.select {|e| !!e.summary.match(/Anniversary/i) }.sort {|a,b| a.dtstart <=> b.dtstart }
+  events.each do |event|
+    time = Nzholidays.nz_time(event.dtstart.year, event.dtstart.month, event.dtstart.day)
    -%>
-    nz_time( <%= event.dtstart.year %>, <%= event.dtstart.month %>, <%= event.dtstart.day %> ), # <%= event.summary %>
+    Time.new(<%= time.year %>, <%= time.month %>, <%= time.day %>, <%= time.hour %>, <%= time.min %>, <%= time.sec %>, <%= time.gmt_offset %>), # <%= event.summary %>
 <%
      end
    end
 -%>
   ]
-
-  def self.nz_public_holiday?(query)
-    !!HOLIDAYS.find do |hol|
-      hol.year == query.year && hol.month == query.month && hol.day == query.day
-    end
-  end
-
-  def self.nz_anniversary?(query)
-    !!ANNIVERSARIES.find do |hol|
-      hol.year == query.year && hol.month == query.month && hol.day == query.day
-    end
-  end
 
 end

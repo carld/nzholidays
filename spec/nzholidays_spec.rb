@@ -41,8 +41,8 @@ RSpec.describe Nzholidays do
     expect(Nzholidays.nz_anniversary?(time)).to be false
   end
 
-  it "returns false on 2018-04-02 08:59:28 +1200" do
-    time = Time.new(2018, 4, 2, 8, 59, 28, "+12:00")  # Easter Monday
+  it "returns true on Easter Monday 2nd April 2018" do
+    time = Time.new(2018, 4, 2, 8, 59, 28, "+12:00")
     expect(Nzholidays.nz_public_holiday?(time)).to be true
   end
 
