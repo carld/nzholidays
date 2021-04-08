@@ -1,4 +1,4 @@
-# Auto-generated at 2018-10-03 15:10:33 +1300
+# Auto-generated at 2021-04-09 11:57:32 +1200
 # Do not edit - see template lib/nzholidays/template.erb
 # To regenerate, `bundle exec rake generate`
 
@@ -37,8 +37,8 @@ module Nzholidays
     Time.new(2011, 1, 4, 0, 0, 0, 46800), # Day after New Year's Day Public Holiday for employees who would not normally work on Sunday
     Time.new(2011, 2, 6, 0, 0, 0, 46800), # Waitangi Day
     Time.new(2011, 4, 22, 0, 0, 0, 43200), # Good Friday
-    Time.new(2011, 4, 25, 0, 0, 0, 43200), # Easter Monday
     Time.new(2011, 4, 25, 0, 0, 0, 43200), # ANZAC Day
+    Time.new(2011, 4, 25, 0, 0, 0, 43200), # Easter Monday
     Time.new(2011, 6, 6, 0, 0, 0, 43200), # Queen's Birthday
     Time.new(2011, 10, 24, 0, 0, 0, 46800), # Labour Day
     Time.new(2011, 12, 25, 0, 0, 0, 46800), # Christmas Day (Public Holiday for employees who would normally work on Sunday)
@@ -161,10 +161,10 @@ module Nzholidays
   ]
 
   ANNIVERSARIES = [
-    Time.new(2008, 12, 1, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2008, 12, 1, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
-    Time.new(2009, 1, 19, 0, 0, 0, 46800), # Wellington Anniversary Day
+    Time.new(2008, 12, 1, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2009, 1, 19, 0, 0, 0, 46800), # Southland Anniversary Day
+    Time.new(2009, 1, 19, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2009, 1, 26, 0, 0, 0, 46800), # Auckland Anniversary Day
     Time.new(2009, 2, 2, 0, 0, 0, 46800), # Nelson Anniversary Day
     Time.new(2009, 3, 9, 0, 0, 0, 46800), # Taranaki Anniversary Day
@@ -173,8 +173,8 @@ module Nzholidays
     Time.new(2009, 10, 23, 0, 0, 0, 46800), # Hawkes' Bay Anniversary Day
     Time.new(2009, 11, 2, 0, 0, 0, 46800), # Marlborough Anniversary Day
     Time.new(2009, 11, 13, 0, 0, 0, 46800), # Canterbury Anniversary Day
-    Time.new(2009, 11, 30, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
     Time.new(2009, 11, 30, 0, 0, 0, 46800), # Westland Anniversary Day
+    Time.new(2009, 11, 30, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
     Time.new(2010, 1, 18, 0, 0, 0, 46800), # Southland Anniversary Day
     Time.new(2010, 1, 25, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2010, 2, 1, 0, 0, 0, 46800), # Auckland Anniversary Day
@@ -185,8 +185,8 @@ module Nzholidays
     Time.new(2010, 10, 22, 0, 0, 0, 46800), # Hawkes' Bay Anniversary Day
     Time.new(2010, 11, 1, 0, 0, 0, 46800), # Marlborough Anniversary Day
     Time.new(2010, 11, 12, 0, 0, 0, 46800), # Canterbury Anniversary Day
-    Time.new(2010, 11, 29, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
     Time.new(2010, 11, 29, 0, 0, 0, 46800), # Westland Anniversary Day
+    Time.new(2010, 11, 29, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
     Time.new(2011, 1, 17, 0, 0, 0, 46800), # Southland Anniversary Day
     Time.new(2011, 1, 24, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2011, 1, 31, 0, 0, 0, 46800), # Nelson Anniversary Day
@@ -201,8 +201,8 @@ module Nzholidays
     Time.new(2011, 12, 5, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2012, 1, 16, 0, 0, 0, 46800), # Southland Anniversary Day
     Time.new(2012, 1, 23, 0, 0, 0, 46800), # Wellington Anniversary Day
-    Time.new(2012, 1, 30, 0, 0, 0, 46800), # Auckland Anniversary Day
     Time.new(2012, 1, 30, 0, 0, 0, 46800), # Nelson Anniversary Day
+    Time.new(2012, 1, 30, 0, 0, 0, 46800), # Auckland Anniversary Day
     Time.new(2012, 3, 12, 0, 0, 0, 46800), # Taranaki Anniversary Day
     Time.new(2012, 3, 26, 0, 0, 0, 46800), # Otago Anniversary Day
     Time.new(2012, 9, 24, 0, 0, 0, 43200), # South Canterbury Anniversary Day
@@ -211,8 +211,8 @@ module Nzholidays
     Time.new(2012, 11, 16, 0, 0, 0, 46800), # Canterbury Anniversary Day
     Time.new(2012, 12, 3, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2012, 12, 3, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
-    Time.new(2013, 1, 21, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2013, 1, 21, 0, 0, 0, 46800), # Southland Anniversary Day
+    Time.new(2013, 1, 21, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2013, 1, 28, 0, 0, 0, 46800), # Auckland Anniversary Day
     Time.new(2013, 2, 4, 0, 0, 0, 46800), # Nelson Anniversary Day
     Time.new(2013, 3, 11, 0, 0, 0, 46800), # Taranaki Anniversary Day
@@ -221,8 +221,8 @@ module Nzholidays
     Time.new(2013, 10, 25, 0, 0, 0, 46800), # Hawkes' Bay Anniversary Day
     Time.new(2013, 11, 4, 0, 0, 0, 46800), # Marlborough Anniversary Day
     Time.new(2013, 11, 15, 0, 0, 0, 46800), # Canterbury Anniversary Day
-    Time.new(2013, 12, 2, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2013, 12, 2, 0, 0, 0, 46800), # Chatham Islands Anniversary Day
+    Time.new(2013, 12, 2, 0, 0, 0, 46800), # Westland Anniversary Day
     Time.new(2014, 1, 20, 0, 0, 0, 46800), # Wellington Anniversary Day
     Time.new(2014, 1, 27, 0, 0, 0, 46800), # Auckland Anniversary Day
     Time.new(2014, 2, 3, 0, 0, 0, 46800), # Nelson Anniversary Day
@@ -272,8 +272,8 @@ module Nzholidays
     Time.new(2017, 11, 27, 0, 0, 0, 46800), # Chatham Islands Anniversary
     Time.new(2017, 12, 4, 0, 0, 0, 46800), # Westland Anniversary
     Time.new(2018, 1, 22, 0, 0, 0, 46800), # Wellington Anniversary
-    Time.new(2018, 1, 29, 0, 0, 0, 46800), # Nelson Anniversary
     Time.new(2018, 1, 29, 0, 0, 0, 46800), # Auckland Anniversary
+    Time.new(2018, 1, 29, 0, 0, 0, 46800), # Nelson Anniversary
     Time.new(2018, 3, 12, 0, 0, 0, 46800), # Taranaki Anniversary
     Time.new(2018, 3, 26, 0, 0, 0, 46800), # Otago Anniversary
     Time.new(2018, 4, 3, 0, 0, 0, 43200), # Southland Anniversary
@@ -281,8 +281,8 @@ module Nzholidays
     Time.new(2018, 10, 19, 0, 0, 0, 46800), # Hawke's Bay Anniversary
     Time.new(2018, 10, 29, 0, 0, 0, 46800), # Marlborough Anniversary
     Time.new(2018, 11, 16, 0, 0, 0, 46800), # Canterbury Anniversary
-    Time.new(2018, 12, 3, 0, 0, 0, 46800), # Chatham Islands Anniversary
     Time.new(2018, 12, 3, 0, 0, 0, 46800), # Westland Anniversary
+    Time.new(2018, 12, 3, 0, 0, 0, 46800), # Chatham Islands Anniversary
     Time.new(2019, 1, 21, 0, 0, 0, 46800), # Wellington Anniversary
     Time.new(2019, 1, 28, 0, 0, 0, 46800), # Auckland Anniversary
     Time.new(2019, 2, 4, 0, 0, 0, 46800), # Nelson Anniversary
@@ -308,8 +308,8 @@ module Nzholidays
     Time.new(2020, 11, 30, 0, 0, 0, 46800), # Chatham Islands Anniversary
     Time.new(2020, 11, 30, 0, 0, 0, 46800), # Westland Anniversary
     Time.new(2021, 1, 25, 0, 0, 0, 46800), # Wellington Anniversary
-    Time.new(2021, 2, 1, 0, 0, 0, 46800), # Nelson Anniversary
     Time.new(2021, 2, 1, 0, 0, 0, 46800), # Auckland Anniversary
+    Time.new(2021, 2, 1, 0, 0, 0, 46800), # Nelson Anniversary
     Time.new(2021, 3, 8, 0, 0, 0, 46800), # Taranaki Anniversary
     Time.new(2021, 3, 22, 0, 0, 0, 46800), # Otago Anniversary
     Time.new(2021, 4, 6, 0, 0, 0, 43200), # Southland Anniversary
@@ -317,8 +317,8 @@ module Nzholidays
     Time.new(2021, 10, 22, 0, 0, 0, 46800), # Hawke's Bay Anniversary
     Time.new(2021, 11, 1, 0, 0, 0, 46800), # Marlborough Anniversary
     Time.new(2021, 11, 12, 0, 0, 0, 46800), # Canterbury Anniversary
-    Time.new(2021, 11, 29, 0, 0, 0, 46800), # Chatham Islands Anniversary
     Time.new(2021, 11, 29, 0, 0, 0, 46800), # Westland Anniversary
+    Time.new(2021, 11, 29, 0, 0, 0, 46800), # Chatham Islands Anniversary
   ]
 
 end
