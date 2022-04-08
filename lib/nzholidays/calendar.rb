@@ -1,4 +1,4 @@
-# Auto-generated at 2022-04-08 20:21:14 +1200
+# Auto-generated at 2022-04-08 22:15:16 +1200
 # Do not edit - see template lib/nzholidays/template.erb
 # To regenerate, `bundle exec rake generate`
 
@@ -320,5 +320,7 @@ module Nzholidays
     Time.new(2021, 11, 29, 0, 0, 0, 46800), # Westland Anniversary
     Time.new(2021, 11, 29, 0, 0, 0, 46800), # Chatham Islands Anniversary
   ]
+
+  LAST_HOLIDAY ||= HOLIDAYS.sort.last
 
 end

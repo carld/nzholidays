@@ -4,20 +4,22 @@ require 'bundler/setup'
 
 RSpec::Core::RakeTask.new(:spec)
 
-SOURCE_URL = 'http://apps.employment.govt.nz/ical/public-holidays-all.ics'
-FILE       = 'public-holidays-all.ics'
+ICS_FILE       = 'public-holidays-all.ics'
 
 task :default => [:generate, :spec]
 
 task :download do
+
   require 'open-uri'
   require 'net/http'
+  require 'tzinfo'
+  require 'nzholidays/nztime'
 
-  puts "Downloading #{SOURCE_URL}"
+  puts "Downloading #{Nzholidays::CALENDAR_SOURCE_URL}"
 
   # Download the ICS file
-  open(FILE, 'wb') do |file|
-    file << open(SOURCE_URL).read
+  open(ICS_FILE, 'wb') do |file|
+    file << URI.open(Nzholidays::CALENDAR_SOURCE_URL).read
   end
 end
 
@@ -26,9 +28,8 @@ task :generate => [:download] do
   require 'erb'
   require 'icalendar'
   require 'tzinfo'
-  require 'nzholidays/nztime'
 
-  cal_file = File.open(FILE)
+  cal_file = File.open(ICS_FILE)
   calendars = Icalendar::Calendar.parse(cal_file)
 
   template = 'lib/nzholidays/template.erb'
