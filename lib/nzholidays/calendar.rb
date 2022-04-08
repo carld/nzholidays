@@ -1,4 +1,4 @@
-# Auto-generated at 2021-04-09 11:57:32 +1200
+# Auto-generated at 2022-04-08 20:21:14 +1200
 # Do not edit - see template lib/nzholidays/template.erb
 # To regenerate, `bundle exec rake generate`
 
