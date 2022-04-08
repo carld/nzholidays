@@ -1,15 +1,16 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+# frozen_string_literal: true
+
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 require 'bundler/setup'
 
 RSpec::Core::RakeTask.new(:spec)
 
-ICS_FILE       = 'public-holidays-all.ics'
+ICS_FILE = 'public-holidays-all.ics'
 
-task :default => [:generate, :spec]
+task default: %i[generate spec]
 
 task :download do
-
   require 'open-uri'
   require 'net/http'
   require 'tzinfo'
@@ -23,8 +24,7 @@ task :download do
   end
 end
 
-task :generate => [:download] do
-
+task generate: [:download] do
   require 'erb'
   require 'icalendar'
   require 'tzinfo'
@@ -43,5 +43,4 @@ task :generate => [:download] do
   File.open(output, 'w') do |f|
     f.write erb.result(binding)
   end
-
 end
