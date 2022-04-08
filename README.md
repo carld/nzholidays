@@ -1,5 +1,7 @@
 # Nzholidays🏖
 
+*It appears that the calendar this relied on is no longer updated since 2021.*
+
 This gem offers a way to determine whether a date is a New Zealand public
 holiday.
 
